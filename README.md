@@ -25,3 +25,13 @@ Ricart-Agarwala Mutual Exclusion Algorithm Output:
 ![unnamed](https://user-images.githubusercontent.com/67540881/159936852-5c7d8751-e3dd-4478-a771-92fde11a1f76.png)
 
 ![unnamed](https://user-images.githubusercontent.com/67540881/159936879-67a0d2d3-7269-4ad7-a2eb-67d6dc050610.png)
+
+
+Candy-misra-haas & Model : 
+
+![Screenshot (1)](https://user-images.githubusercontent.com/67540881/160590002-3794f095-c14a-4084-8277-6eee79549e8e.png)
+
+![Screenshot (2)](https://user-images.githubusercontent.com/67540881/160590040-acee5950-1205-484b-8e44-dd9a4827109d.png)
+
+
+
