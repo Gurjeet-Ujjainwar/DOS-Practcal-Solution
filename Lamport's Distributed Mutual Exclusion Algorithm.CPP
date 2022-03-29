@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int main()
 {
     int ns,ncs,timestamp,site;
@@ -13,10 +12,10 @@ int main()
     map <int,int> mp;
     for(int i=0;i<ncs;i++)
     {
-        cout<<"\nEnter timestamp:";
-        cin>>timestamp;
-        cout<<"Enter site number:";
+        cout<<"\nEnter site number:";
         cin>>site;
+        cout<<"Enter timestamp:";
+        cin>>timestamp;
         ts[site-1]=timestamp;
         request.push_back(site);
         mp[timestamp]=site;
@@ -30,15 +29,15 @@ int main()
 
     for(int i=0;i<request.size();i++)
     {
-        cout<<"\n Request from site:"<<request[i]<<endl;
+        cout<<"\n REQUEST from site:"<<request[i]<<endl;
         for(int j=0;j<ts.size();j++)
         {
             if(request[i]!=(j+1))
             {
-                if(ts[j]>ts[request[i]-1] || ts[j]==0)
-                    cout<<j+1<<" Replied\n";
-                else
-                    cout<<j+1<<" Deferred\n";
+                if(ts[j]=ts[request[i]-1] || ts[j]==0)
+                    cout<<j+1<<" REPLY\n";
+                /*else
+                    cout<<j+1<<" defered\n";*/
             }
         }
     }
@@ -50,8 +49,7 @@ int main()
     for(it=mp.begin();it!=mp.end();it++)
     {
         cout<<"Site "<<it->second<<" entered Critical Section \n";
-        if(c==0)
-            cout<<"\nSimilarly,\n\n";
+        cout<<"Site "<<it->second<<" RELEASE Critical Section \n\n";
         c++;
     }
     return 0;
