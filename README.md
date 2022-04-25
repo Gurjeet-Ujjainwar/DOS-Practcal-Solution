@@ -34,4 +34,9 @@ Candy-misra-haas & Model :
 ![Screenshot (2)](https://user-images.githubusercontent.com/67540881/160590040-acee5950-1205-484b-8e44-dd9a4827109d.png)
 
 
+Sliding Window Protocol :
+
+![Screenshot (5)](https://user-images.githubusercontent.com/67540881/165028254-403b2b5b-cb96-412d-b007-ecc4553f27d1.png)
+
+
 
