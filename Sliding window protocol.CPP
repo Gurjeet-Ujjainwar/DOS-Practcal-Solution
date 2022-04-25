@@ -47,7 +47,6 @@ int main()
         cout<<it->first<<"="<<it->second<<endl;
     }
 
-    //Since it is just a simulator, I am skipping the logic here
    
     cout<<"\nFinal weights:"<<endl;
     for(map<char,float>::iterator it=mp.begin(); it!=mp.end();it++)
