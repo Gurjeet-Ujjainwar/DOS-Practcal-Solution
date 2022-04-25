@@ -1,63 +1,36 @@
-#include<bits/stdc++.h>
-using namespace std;
-
+#include<stdio.h>
+ 
 int main()
 {
-    cout<<"Enter number of processes:";
-    int p;
-    cin>>p;
-    cout<<"\nEnter process names:"<<endl;
-    map<char,float> mp;
-    for(int i=0;i<p;i++)
+    int w,i,f,frames[50];
+ 
+    printf("Enter window size: ");
+    scanf("%d",&w);
+ 
+    printf("\nEnter number of frames to transmit: ");
+    scanf("%d",&f);
+ 
+    printf("\nEnter %d frames: ",f);
+ 
+    for(i=1;i<=f;i++)
+        scanf("%d",&frames[i]);
+ 
+    printf("\nWith sliding window protocol the frames will be sent in the following manner (assuming no corruption of frames)\n\n");
+    printf("After sending %d frames at each stage sender waits for acknowledgement sent by the receiver\n\n",w);
+ 
+    for(i=1;i<=f;i++)
     {
-        cout<<"Process "<<i+1<<":";
-        char c;
-        cin>>c;
-        mp[c]=0;
-    }
-    cout<<"\nEnter coordinator :";
-    char c;
-    cin>>c;
-    mp[c]=1;
-
-    cout<<"\nInitial weights:"<<endl;
-    for(map<char,float>::iterator it=mp.begin(); it!=mp.end();it++)
-    {
-        cout<<it->first<<"="<<it->second<<endl;
-    }
-
-    cout<<"\nEnter number of flows:";
-    int f;
-    cin>>f;
-    for(int i=0;i<f;i++)
-    {
-        cout<<"\nFlow "<<i+1;
-        char e,o;
-        cout<<"\nStart:";
-        cin>>e;
-        cout<<"Stop:";
-        cin>>o;
-        mp[e]=(float)(mp[e]+mp[o])/2;
-        mp[o]=mp[e];
-    }
-
-    cout<<"\nWeights after flow:"<<endl;
-    for(map<char,float>::iterator it=mp.begin(); it!=mp.end();it++)
-    {
-        cout<<it->first<<"="<<it->second<<endl;
-    }
-
-   
-    cout<<"\nFinal weights:"<<endl;
-    for(map<char,float>::iterator it=mp.begin(); it!=mp.end();it++)
-    {
-        cout<<it->first<<"=";
-        if(it->first==c)
-            cout<<1<<endl;
+        if(i%w==0)
+        {
+            printf("%d\n",frames[i]);
+            printf("Acknowledgement of above frames sent is received by sender\n\n");
+        }
         else
-            cout<<0<<endl;
+            printf("%d ",frames[i]);
     }
-
+ 
+    if(f%w!=0)
+        printf("\nAcknowledgement of above frames sent is received by sender\n");
+ 
     return 0;
-
 }
