@@ -39,4 +39,10 @@ Sliding Window Protocol :
 ![Screenshot (5)](https://user-images.githubusercontent.com/67540881/165028254-403b2b5b-cb96-412d-b007-ecc4553f27d1.png)
 
 
+Termination Detection :
+
+![Screenshot (6)](https://user-images.githubusercontent.com/67540881/165028946-cd87a127-34f2-4cb6-8beb-5fa2a12a3a59.png)
+
+
+
 
